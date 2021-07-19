@@ -75,7 +75,7 @@ SELECT
 	Bezeichnung,
     count(Artnr) AS Teile
 FROM Teilestruktur INNER JOIN Artikel ON Teilestruktur.Artnr = Artikel.Anr
-GROUP BY Artnr
+GROUP BY Artnr,Bezeichnung
 HAVING Teile > 1  # wirklich nur zusammengesetzte Artikel > 1
 ;
 
